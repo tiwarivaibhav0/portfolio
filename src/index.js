@@ -1,83 +1,90 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import $ from 'jquery';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import $ from "jquery";
 import Typed from "typed.js";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 $(document).ready(function () {
-  // Scroll down sticky navbar script start
-  $(window).scroll(function () {
-    if (this.scrollY > 20) {
-      $(".navbar").addClass("sticky");
-    } else {
-      $(".navbar").removeClass("sticky");
-    }
-    // Scroll down sticky navbar script end
+	// Scroll down sticky navbar script start
+	$(window).scroll(function () {
+		if (this.scrollY > 20) {
+			$(".navbar").addClass("sticky");
+		} else {
+			$(".navbar").removeClass("sticky");
+		}
+		// Scroll down sticky navbar script end
 
-    // Scroll up Button script start
-    if (this.scrollY > 500) {
-      $(".scroll-up-btn").addClass("show");
-    } else {
-      $(".scroll-up-btn").removeClass("show");
-    }
-    // Scroll up Button script end
+		// Scroll up Button script start
+		if (this.scrollY > 500) {
+			$(".scroll-up-btn").addClass("show");
+		} else {
+			$(".scroll-up-btn").removeClass("show");
+		}
+		// Scroll up Button script end
 
-    // Fade In & Fade Out Elements on Scroll script start
-    $(".fadein").each(function (i) {
-      var bottom_of_element = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
+		// Fade In & Fade Out Elements on Scroll script start
+		$(".fadein").each(function (i) {
+			var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+			var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-      if (bottom_of_window > bottom_of_element) {
-        $(this).addClass("showme");
-      }
-      if (bottom_of_window < bottom_of_element) {
-        $(this).removeClass("showme");
-      }
-      // Fade In & Fade Out Elements on Scroll script end
-    });
-  });
+			if (bottom_of_window > bottom_of_element) {
+				$(this).addClass("showme");
+			}
+			if (bottom_of_window < bottom_of_element) {
+				$(this).removeClass("showme");
+			}
+			// Fade In & Fade Out Elements on Scroll script end
+		});
+	});
 
-  // Scroll up Button script start
-  $(".scroll-up-btn").click(function () {
-    $("html").animate({ scrollTop: 0 });
-  });
-  // Scroll up Button script end
+	// Scroll up Button script start
+	$(".scroll-up-btn").click(function () {
+		$("html").animate({ scrollTop: 0 });
+	});
+	// Scroll up Button script end
 
-  // Typing animation script start
-  var typed = new Typed(".typing", {
-    strings: ["React.js Developer", "Front End Developer", "Youtuber", "Teacher"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
-  });
+	// Typing animation script start
+	var typed = new Typed(".typing", {
+		strings: [
+			"React.js Developer",
+			"Front End Developer",
+			"Adaptable Code Craftsman",
+			"Analytical Programming Expert","Collaborative Team Player"
+		],
+		typeSpeed: 100,
+		backSpeed: 10,
+		loop: true,
+	});
 
-  // eslint-disable-next-line no-redeclare
-  var typed = new Typed(".typing2", {
-    strings: ["React.js Developer", "Front End Developer", "Youtuber", "Teacher"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
-  });
+	// eslint-disable-next-line no-redeclare
+	var typed = new Typed(".typing2", {
+		strings: [
+			"Detail-Oriented ReactJS Developer",
+			"Responsive Web Developer",
+			"Client-Focused Front-End Developer",
+			"Continuous Learner and Tech Explorer","Meticulous Code Reviewer"
+		],
+		typeSpeed: 100,
+		backSpeed: 60,
+		loop: true,
+	});
 
-  // toggle menu/navbar script start
-  $(".menu-btn").click(function () {
-    $(".navbar .menu").toggleClass("active");
-    $(".menu-btn i").toggleClass("active");
-  });
-  // toggle menu/navbar script end
-
-
+	// toggle menu/navbar script start
+	$(".menu-btn").click(function () {
+		$(".navbar .menu").toggleClass("active");
+		$(".menu-btn i").toggleClass("active");
+	});
+	// toggle menu/navbar script end
 });
 
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
